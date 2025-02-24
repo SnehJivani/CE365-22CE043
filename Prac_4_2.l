@@ -1,16 +1,20 @@
 %option noyywrap
+
 %{
-#include<stdio.h>
+	#include<stdio.h>
 %}
+
 %%
-[0-9]+ {printf("%s \n",yytext);}
-. {printf("length %d\n",yyleng);}
+charusat {printf("university");}
+
+. 	{printf("%c",yytext[0]);}
 %%
+
+
+
 int main()
 {
-printf("Enter String : ");
-yylex();
-return 0;
+	printf("Enter any String :");
+	yylex();
+	return 0;
 }
-
-
